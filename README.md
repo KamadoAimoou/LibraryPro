@@ -141,3 +141,35 @@ library
       ├── dashboard.fxml
       ├── books.fxml
       └── book_form.fxml
+
+
+
+
+      library/
+├── Main.java
+├── controller/
+│   ├── LoginController.java          # (опционально) экран логина
+│   ├── DashboardController.java      # краткая статистика по библиотеке
+│   ├── BooksController.java          # список книг, фильтры, выдача/возврат
+│   └── BookFormController.java       # форма добавления/редактирования книги
+├── model/
+│   ├── Book.java                     # класс книги
+│   ├── BorrowRecord.java             # запись о выдаче книги (для истории)
+│   ├── Reader.java                   # класс читателя (простой)
+│   └── Status.java                   # enum: AVAILABLE, BORROWED, OVERDUE
+├── dao/
+│   ├── BookDao.java                  # работа с таблицей books
+│   ├── BorrowRecordDao.java          # работа с таблицей borrow_history
+│   └── ReaderDao.java                # если делаете экран читателей
+├── service/
+│   └── LibraryService.java           # бизнес-логика: выдача, возврат, поиск
+├── util/
+│   ├── DbUtil.java                   # подключение к базе
+│   ├── DialogUtil.java               # алёрты/подтверждения/ошибки
+│   └── DateUtil.java                 # работа с датами (опционально)
+└── view/
+    ├── login.fxml                    # экран логина (опционально)
+    ├── dashboard.fxml                # экран с краткой статистикой
+    ├── books.fxml                    # основной экран с таблицей книг
+    └── book_form.fxml                # форма добавления/редактирования книги
+
