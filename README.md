@@ -110,24 +110,34 @@ Map<String, Long> booksByGenre = allBooks.stream()
 📂 5. Структура проекта
 library
  ├── Main.java
+ │
  ├── controller
- │    ├── LoginController.java
- │    ├── DashboardController.java
- │    ├── BooksController.java
- │    ├── BookFormController.java
- │    └── BorrowHistoryController.java
+ │    ├── LoginController.java        // (опционально, но красиво)
+ │    ├── DashboardController.java    // краткая статистика
+ │    ├── BooksController.java        // список книг, фильтры, выдача/возврат
+ │    └── BookFormController.java     // форма добавления/редактирования книги
+ │
  ├── model
- │    ├── Book.java
- │    └── BorrowRecord.java
+ │    ├── Book.java                   // книга
+ │    ├── BorrowRecord.java           // запись о выдаче (для истории)
+ │    ├── Reader.java                 // читатель (простой класс)
+ │    └── Status.java                 // enum: AVAILABLE, BORROWED, OVERDUE
+ │
  ├── dao
- │    ├── BookDao.java
- │    └── BorrowHistoryDao.java
+ │    ├── BookDao.java                // работа с таблицей books
+ │    ├── BorrowRecordDao.java        // работа с таблицей borrow_history
+ │    └── ReaderDao.java              // если делаете экран читателей
+ │
+ ├── service
+ │    └── LibraryService.java         // вся бизнес-логика: выдача, возврат, поиск
+ │
  ├── util
- │    ├── DbUtil.java
- │    └── DialogUtil.java
+ │    ├── DbUtil.java                 // подключение к БД
+ │    ├── DialogUtil.java             // алёрты/ошибки/подтверждения
+ │    └── DateUtil.java               // работа с датами (опционально)
+ │
  └── view
-      ├── login.fxml
+      ├── login.fxml                  // (опционально)
       ├── dashboard.fxml
       ├── books.fxml
-      ├── book_form.fxml
-      └── borrow_history.fxml
+      └── book_form.fxml
