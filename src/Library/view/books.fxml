@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox spacing="15" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="library.controller.BooksController">
+
+    <Label text="Books"
+           style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+    <Button text="Add Book"
+            styleClass="primary-btn"
+            onAction="#openForm"/>
+
+    <TableView fx:id="booksTable" prefHeight="400">
+        <columns>
+            <TableColumn text="ID" prefWidth="70"/>
+            <TableColumn text="Title" prefWidth="200"/>
+            <TableColumn text="Author" prefWidth="200"/>
+            <TableColumn text="Status" prefWidth="120"/>
+        </columns>
+    </TableView>
+
+</VBox>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane fx:controller="library.controller.DashboardController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <!-- LEFT MENU -->
+    <left>
+        <VBox spacing="20" prefWidth="180" style="-fx-background-color: #f5f5f5; -fx-padding: 20;">
+            <Label text="Library Pro"
+                   style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+            <Button text="Dashboard" fx:id="btnDashboard"
+                    onAction="#openDashboard"
+                    styleClass="menu-btn"/>
+
+            <Button text="Books" fx:id="btnBooks"
+                    onAction="#openBooks"
+                    styleClass="menu-btn"/>
+
+            <Button text="Add Book" fx:id="btnAddBook"
+                    onAction="#openBookForm"
+                    styleClass="menu-btn"/>
+
+        </VBox>
+    </left>
+
+    <!-- MAIN CONTENT -->
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-padding: 20;"/>
+    </center>
+
+</BorderPane>
