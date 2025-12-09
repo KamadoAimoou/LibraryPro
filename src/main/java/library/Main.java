@@ -1,23 +1,23 @@
 package library;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
     @Override
-    public void start(Stage stage) {
-        Label label = new Label("Hello, Library!");
-        Scene scene = new Scene(label, 400, 200);
+    public void start(Stage stage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/books.fxml"));
+        Scene scene = new Scene(loader.load(), 600, 400);
+
         stage.setTitle("LibraryPro");
         stage.setScene(scene);
         stage.show();
     }
 
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
 }
 
