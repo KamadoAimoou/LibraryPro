@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/25"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="library.controller.LoginController"
+           styleClass="login-root">
+
+    <VBox alignment="CENTER" maxWidth="350" styleClass="login-box">
+
+        <Label text="LibraryPro" styleClass="login-title"/>
+        <Label text="Welcome back! Please login to continue" styleClass="login-subtitle"/>
+
+        <TextField fx:id="usernameField" promptText="Username" styleClass="login-field"/>
+        <PasswordField fx:id="passwordField" promptText="Password" styleClass="login-field"/>
+
+        <HBox spacing="20" alignment="CENTER" styleClass="login-buttons-container">
+            <Button text="Login" onAction="#handleLogin" styleClass="login-button"/>
+            <Button text="Register" onAction="#handleRegister" styleClass="register-button"/>
+        </HBox>
+
+    </VBox>
+
+</StackPane>

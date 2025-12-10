@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?> <BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+                                    fx:controller="library.controller.DashboardController"
+                                    styleClass="dashboard-root">
+
+    <stylesheets>
+        <URL value="@main.css"/>
+    </stylesheets>
+
+    <left>
+        <VBox spacing="15" styleClass="menu-box">
+            <Label text="Menu" styleClass="menu-box-title"/>
+            <Button text="Available Books" onAction="#showAvailableBooks" styleClass="menu-button"/>
+            <Button text="Issue Books" onAction="#showIssueBooks" styleClass="menu-button"/>
+            <Button text="Return Books" onAction="#showReturnBooks" styleClass="menu-button"/>
+            <Button text="Saved Books" onAction="#showSavedBooks" styleClass="menu-button"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="15" fx:id="bookDisplay" styleClass="book-display">
+            <Label fx:id="centerTitle" text="Available Books" styleClass="book-display-title"/>
+            <Label text="No books loaded yet."/>
+        </VBox>
+    </center>
+
+    <right>
+        <VBox spacing="10" styleClass="book-details">
+            <Label text="DETAILS" styleClass="detail-label"/>
+            <Separator/>
+
+            <Label text="Title:" styleClass="detail-label"/>
+            <Label fx:id="bookTitle" text="Select a book" styleClass="detail-value"/>
+
+            <Label text="Author:" styleClass="detail-label"/>
+            <Label fx:id="bookAuthor" styleClass="detail-value"/>
+
+            <Label text="Type:" styleClass="detail-label"/>
+            <Label fx:id="bookType" styleClass="detail-value"/>
+
+            <Label text="Published:" styleClass="detail-label"/>
+            <Label fx:id="bookPublished" styleClass="detail-value"/>
+
+            <HBox spacing="10" styleClass="action-buttons-container">
+                <Button text="Save" onAction="#handleSave" styleClass="action-button"/>
+                <Button text="Return" onAction="#handleReturn" styleClass="action-button, return-button"/>
+            </HBox>
+        </VBox>
+    </right>
+</BorderPane>

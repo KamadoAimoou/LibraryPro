@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="library.controller.BooksController"
+            styleClass="books-list-root"
+            prefWidth="800" prefHeight="600">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" BorderPane.margin="20">
+            <Button text="⬅ Back"
+                    fx:id="btnBack"
+                    onAction="#goBack"
+                    styleClass="back-button"/>
+
+            <Label text="Books Management" styleClass="books-header" HBox.hgrow="ALWAYS" alignment="CENTER"/>
+
+            <Button text="➕ Add Book"
+                    fx:id="btnAddBook"
+                    onAction="#openBookForm"
+                    styleClass="list-action-button"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox styleClass="list-container" alignment="TOP_CENTER" BorderPane.margin="10 20 20 20">
+            <TableView fx:id="booksTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn text="ID" prefWidth="50"/>
+                    <TableColumn text="Title" prefWidth="300"/>
+                    <TableColumn text="Author" prefWidth="150"/>
+                    <TableColumn text="Year" prefWidth="80"/>
+                    <TableColumn text="Status" prefWidth="100"/>
+                    <TableColumn text="Actions" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+</BorderPane>
