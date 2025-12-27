@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="library.controllers.BooksController"
+      spacing="12"
+      styleClass="content-padding">
+
+    <HBox spacing="8">
+        <!-- ✅ Форсим нормальную видимость и кликабельность (если CSS глушит) -->
+        <TextField fx:id="searchField"
+                   promptText="Search by title"
+                   HBox.hgrow="ALWAYS"
+                   style="-fx-opacity: 1; -fx-background-color: white; -fx-text-fill: black; -fx-prompt-text-fill: #777;"/>
+
+        <Button text="Search" onAction="#searchBooks" styleClass="primary-btn"/>
+        <Button fx:id="favoriteBtn" text="Save to Favorites" onAction="#saveFavorite" styleClass="ghost-btn"/>
+    </HBox>
+
+    <TableView fx:id="booksTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="180"/>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="140"/>
+            <TableColumn fx:id="typeColumn" text="Type" prefWidth="100"/>
+            <TableColumn fx:id="dateColumn" text="Published" prefWidth="100"/>
+            <TableColumn fx:id="availableColumn" text="Available" prefWidth="90"/>
+        </columns>
+    </TableView>
+
+    <GridPane hgap="8" vgap="8">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="25"/>
+            <ColumnConstraints percentWidth="25"/>
+            <ColumnConstraints percentWidth="25"/>
+            <ColumnConstraints percentWidth="25"/>
+        </columnConstraints>
+        <children>
+            <TextField fx:id="titleField" promptText="Title" GridPane.columnIndex="0"/>
+            <TextField fx:id="authorField" promptText="Author" GridPane.columnIndex="1"/>
+            <TextField fx:id="typeField" promptText="Type" GridPane.columnIndex="2"/>
+            <DatePicker fx:id="publishedPicker" promptText="Published date" GridPane.columnIndex="3"/>
+        </children>
+    </GridPane>
+
+    <HBox spacing="8">
+        <Button fx:id="saveBtn" text="Save / Update" onAction="#saveBook" styleClass="primary-btn"/>
+        <Button fx:id="deleteBtn" text="Delete" onAction="#deleteBook" styleClass="danger-btn"/>
+    </HBox>
+</VBox>

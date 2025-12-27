@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="library.controllers.LoginController"
+            stylesheets="@../css/style.css">
+    <children>
+        <Pane styleClass="gradient-bg" prefHeight="420" prefWidth="720"/>
+        <VBox alignment="CENTER" spacing="16" prefWidth="360" prefHeight="320"
+              layoutX="180" layoutY="50" styleClass="card">
+            <children>
+                <Label text="Library Portal" styleClass="title"/>
+                <TextField fx:id="studentIdField" promptText="Student ID" styleClass="input"/>
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="input"/>
+                <Button text="Login" onAction="#handleLogin" styleClass="primary-btn" prefWidth="240"/>
+                <Label fx:id="errorLabel" textFill="#ff6b6b" />
+            </children>
+            <padding><Insets top="24" right="24" bottom="24" left="24"/></padding>
+        </VBox>
+    </children>
+</AnchorPane>
+

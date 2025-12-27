@@ -1,0 +1,26 @@
+package library.utils;
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+
+public class Alerts {
+
+    private Alerts() {
+    }
+
+    public static void info(String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, message, ButtonType.OK);
+        alert.showAndWait();
+    }
+
+    public static void error(String message) {
+        Alert alert = new Alert(Alert.AlertType.ERROR, message, ButtonType.OK);
+        alert.showAndWait();
+    }
+
+    public static boolean confirm(String message) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, message, ButtonType.OK, ButtonType.CANCEL);
+        return alert.showAndWait().filter(ButtonType.OK::equals).isPresent();
+    }
+}
+

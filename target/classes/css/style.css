@@ -1,0 +1,90 @@
+.gradient-bg {
+    -fx-background-color: linear-gradient(to bottom right, #0d1b2a, #1b263b, #415a77);
+}
+
+.card {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 12, 0.2, 0, 8);
+}
+
+.title {
+    -fx-text-fill: #e0e6ed;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.title-small {
+    -fx-text-fill: #d8e3f0;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-text-fill: #b8c4d8;
+}
+
+.input, .text-field, .password-field {
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(255,255,255,0.08);
+    -fx-border-radius: 10;
+    -fx-text-fill: #e0e6ed;
+}
+
+.primary-btn {
+    -fx-background-color: linear-gradient(to right, #4cc9f0, #4361ee);
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 8 16;
+    -fx-font-weight: bold;
+}
+
+.nav-btn, .ghost-btn {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-text-fill: #e0e6ed;
+    -fx-background-radius: 10;
+    -fx-padding: 8 12;
+}
+
+.ghost-btn {
+    -fx-border-color: #4cc9f0;
+    -fx-border-radius: 10;
+}
+
+.danger-btn {
+    -fx-background-color: #ef476f;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 8 12;
+}
+
+.sidebar {
+    -fx-background-color: rgba(255,255,255,0.02);
+}
+
+.header-bar {
+    -fx-background-color: rgba(255,255,255,0.03);
+}
+
+.content-bg {
+    -fx-background-color: rgba(255,255,255,0.02);
+    -fx-padding: 12;
+}
+
+.content-padding {
+    -fx-padding: 12;
+}
+
+table-view {
+    -fx-background-color: transparent;
+}
+
+table-view .column-header-background {
+    -fx-background-color: rgba(255,255,255,0.06);
+}
+
+table-view .table-row-cell {
+    -fx-background-color: rgba(255,255,255,0.02);
+}
+

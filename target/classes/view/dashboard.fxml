@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="library.controllers.DashboardController"
+            stylesheets="@../css/style.css">
+
+    <left>
+        <!-- ✅ вместо fx:include -->
+        <VBox fx:id="sidebarHost"/>
+    </left>
+
+    <top>
+        <HBox spacing="12" alignment="CENTER_LEFT" styleClass="header-bar">
+            <children>
+                <Label text="Library Dashboard" styleClass="title-small"/>
+                <Label fx:id="welcomeLabel" styleClass="subtitle"/>
+            </children>
+            <padding><Insets top="12" right="16" bottom="12" left="16"/></padding>
+        </HBox>
+    </top>
+
+    <center>
+        <StackPane fx:id="contentArea" styleClass="content-bg"/>
+    </center>
+
+</BorderPane>

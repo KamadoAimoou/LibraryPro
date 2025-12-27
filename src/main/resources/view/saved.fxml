@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="library.controllers.SavedController"
+      spacing="12"
+      styleClass="content-padding">
+    <HBox spacing="8">
+        <Label text="Saved / Favorite Books" styleClass="subtitle"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="removeBtn" text="Remove" onAction="#removeFavorite" styleClass="danger-btn"/>
+    </HBox>
+
+    <TableView fx:id="savedTable" prefHeight="340">
+        <columns>
+            <TableColumn fx:id="titleColumn" text="Title" prefWidth="200"/>
+            <TableColumn fx:id="authorColumn" text="Author" prefWidth="140"/>
+            <TableColumn fx:id="typeColumn" text="Type" prefWidth="120"/>
+        </columns>
+    </TableView>
+</VBox>
+
